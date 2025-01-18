@@ -3496,10 +3496,10 @@ input, select, textarea {
 	opacity: 0; /* Initial state */
   }
   
-  #five .logo-item:hover {
+  /*#five .logo-item:hover {
 	transform: scale(1.1);
 	background-color: #e0f7fa;
-  }
+  }*/
   
   #five .logo-item img {
 	width: 60px;
@@ -3510,6 +3510,7 @@ input, select, textarea {
   
   #five .logo-item:hover img {
 	opacity: 0.8;
+	width: 80px;
   }
 
   
@@ -3655,7 +3656,7 @@ h3 i {
 	display: inline-block;
 	animation: wave 1s ease-in-out infinite;
 	transform-origin: 70% 70%; /* Point pivot */
-	font-size: 4rem; /* Taille de l'emoji */
+	font-size: 3.5rem; /* Taille de l'emoji */
 	margin-right: 0.5rem;
 }
 
@@ -3666,7 +3667,12 @@ h3 i {
 	gap: 0.5rem;
 }
 
-
+/* Taille réduite pour les écrans de téléphone */
+@media (max-width: 768px) {
+    .wave-emoji {
+        font-size: 2.5rem; /* Taille plus petite pour les petits écrans */
+    }
+}
 
 
 
@@ -3825,4 +3831,40 @@ h3 i {
 #preloader.hidden {
     opacity: 0;
     visibility: hidden;
+}
+
+
+
+
+
+
+
+#copy-email-btn {
+    display: inline-block;
+    background-color: #775AFF; /* Bleu professionnel */
+    color: #ffffff; /* Texte blanc */
+    padding: 10px 10px; /* Espacement équilibré */
+    font-size: 14px; /* Taille de texte lisible */
+    font-weight: 500; /* Texte légèrement accentué */
+    text-align: center;
+    text-decoration: none; /* Pas de soulignement */
+    border: none; /* Suppression des bordures par défaut */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    transition: background-color 0.3s ease; /* Transitions douces */
+    cursor: pointer; /* Curseur en mode clic */
+}
+
+#copy-email-btn:hover {
+    background-color: #a490ff; /* Couleur au survol */
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .button {
+        padding-left: 20px; /* Ajuste l'espace dans la version mobile */
+        padding-right: 20px; /* Ajuste l'espace dans la version mobile */
+    }
 }
